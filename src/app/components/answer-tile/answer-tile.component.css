@@ -1,0 +1,19 @@
+.answer-tile {
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.answer-tile__alphabet {
+  font-weight: bold;
+}
+
+.answer-tile__number {
+  font-size: 12px;
+  color: #232F34;
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+}

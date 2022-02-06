@@ -1,0 +1,29 @@
+<div class="start-view">
+  <!-- top bar for dummy countdown -->
+  <div id="countdown">
+    <div id="countdown-number"></div>
+    <svg>
+      <circle r="18" cx="20" cy="20"></circle>
+    </svg>
+  </div>
+
+  <div class="mdc-card">
+    <div class="mdc-card-content">
+      <div class="mdc-card__title">Welcome to Mathy Msg!</div>
+      <div class="mdc-card__body">
+        <b>Instructions</b><br/>
+        <div class="left-align">
+          <ul>
+            <li>You have 10 seconds to answer each question (timer is on the top left)</li>
+            <li>Click the alphabet that corresponds to the correct number (e.g. if the answer is 8, please click on H)</li>
+            <app-answer-tile [alphabet]="'H'" [number]="8"></app-answer-tile>
+            <li>If an answer is wrong or 10 seconds is up, you lose and need to restart from the beginning</li>
+            <li>A hidden message awaits when you've completed all questions flawlessly :)</li>
+          </ul>
+        </div>
+        
+      </div>
+      <button type="button" class="button" (click)="onReady()">START</button>
+    </div>
+  </div>
+</div>

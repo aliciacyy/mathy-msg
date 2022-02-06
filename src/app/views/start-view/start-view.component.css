@@ -1,0 +1,60 @@
+#countdown {
+  position: relative;
+  margin-top: 10px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: #F57F17;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  stroke: #F57F17;
+  fill: none;
+  animation: countdown 10s linear infinite forwards;
+}
+
+.mdc-card {
+  margin-top: 16px;
+}
+
+.mdc-card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.mdc-card__title {
+  font-size: 21px;
+  font-weight: bold;
+  color: #232F34;
+  margin-bottom: 8px;
+}
+
+.mdc-card__body {
+  font-size: 17px;
+  color: #232F34;
+}
+
+.left-align {
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -27,9 +27,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/foundation-sites/dist/css/foundation.min.css",
+              "node_modules/@material/card/dist/mdc.card.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/foundation-sites/dist/js/foundation.min.js"
+            ]
           },
           "configurations": {
             "production": {
