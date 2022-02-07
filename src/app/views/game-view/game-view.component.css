@@ -1,0 +1,31 @@
+.question {
+  margin-top: 8px;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e0e0e0;
+  padding: 4px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 6px;
+  margin-top: 12px;
+}
+
+.keyboard > app-answer-tile {
+  justify-self: center;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}

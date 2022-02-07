@@ -1,0 +1,22 @@
+<div class="game-view">
+  <div class="top-bar">
+    <div id="countdown">
+      <div id="countdown-number"></div>
+      <svg>
+        <circle r="18" cx="20" cy="20"></circle>
+      </svg>
+    </div>
+    <div class="title">Mathy Msg</div>
+  </div>
+
+  <div class="grid-container">
+    <div class="question">{{question}}</div>
+
+    <div class="keyboard">
+      <ng-container *ngFor="let letter of letters; index as i">
+        <app-answer-tile [alphabet]="letter" [number]="i + 1" (click)="onAnswerClick(letter)"></app-answer-tile>
+      </ng-container>
+    </div>
+  </div>
+  
+</div>

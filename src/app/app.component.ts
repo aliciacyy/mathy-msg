@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'mathy-msg';
   displayType = 'startView';
+  gameOverMsg = '';
 
   ngOnInit() {
     (<any>$(document)).foundation();
@@ -15,5 +16,9 @@ export class AppComponent implements OnInit {
 
   onChangeView($event: string) {
     this.displayType = $event;
+  }
+  
+  setGameOverMsg($event: string) {
+    this.gameOverMsg = $event;
   }
 }

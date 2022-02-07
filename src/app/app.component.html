@@ -1,8 +1,13 @@
-<div class="grid-container">
-
+<div>
   <ng-container [ngSwitch]="displayType">
     <ng-container *ngSwitchCase="'startView'">
       <app-start-view (changeView)="onChangeView($event)"></app-start-view>
+    </ng-container>
+    <ng-container *ngSwitchCase="'gameView'">
+      <app-game-view (changeView)="onChangeView($event)" (gameOverMsg)="setGameOverMsg($event)"></app-game-view>
+    </ng-container>
+    <ng-container *ngSwitchCase="'gameOverView'">
+      <app-game-over-view [gameOverType]="gameOverMsg" (changeView)="onChangeView($event)"></app-game-over-view>
     </ng-container>
     <ng-container *ngSwitchDefault>Placeholder view - WIP</ng-container>
   </ng-container>

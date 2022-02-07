@@ -1,9 +1,15 @@
 .answer-tile {
-  height: 45px;
-  width: 45px;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  font-size: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e0e0e0;
 }
 
 .answer-tile__alphabet {
