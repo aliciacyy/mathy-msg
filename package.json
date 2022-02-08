@@ -1,6 +1,6 @@
 {
   "name": "mathy-msg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,6 +20,7 @@
     "@angular/router": "~13.0.0",
     "@material/card": "^13.0.0",
     "foundation-sites": "^6.7.4",
+    "js-yaml": "^4.1.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -30,6 +31,7 @@
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
     "@types/jquery": "^3.5.13",
+    "@types/js-yaml": "^4.0.5",
     "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^1.0.0",
     "jasmine-core": "~3.10.0",

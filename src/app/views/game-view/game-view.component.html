@@ -12,6 +12,12 @@
   <div class="grid-container">
     <div class="question">{{question}}</div>
 
+    <div class="dots-section">
+      <div *ngFor="let word of sentence" class="dots-word">
+        <span *ngFor="let letter of word" class="dot"></span>
+      </div>
+    </div>
+
     <div class="keyboard">
       <ng-container *ngFor="let letter of letters; index as i">
         <app-answer-tile [alphabet]="letter" [number]="i + 1" (click)="onAnswerClick(letter)"></app-answer-tile>
