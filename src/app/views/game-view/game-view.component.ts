@@ -39,9 +39,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.lettersMap);
     this.lettersMap['attemptNumber']++;
-    console.log("Current attempt: ", this.lettersMap['attemptNumber']);
     this.getWord();
     this.getQuestion();
     this.countdownNumberEl = document.getElementById('countdown-number');
@@ -87,12 +85,10 @@ export class GameViewComponent implements OnInit, OnDestroy {
     if (this.currentLetterSequence.length > 0) {
       this.currentAnswer = this.sentence[this.wordIndex][this.currentLetterSequence.pop() as number];
       let unusedQuestions = this.lettersMap[this.currentAnswer].questions.filter((questionObj: QuestionObj) => questionObj.attempt <= this.lettersMap['attemptNumber']);
-      console.log(unusedQuestions);
       let questionSize = unusedQuestions.length;
       let questionObj = unusedQuestions[this.getRandomInt(questionSize)];
       questionObj.attempt = this.lettersMap['attemptNumber'] + 1;
       this.question = questionObj.question;
-      console.log("Choosing question ", this.question);
       // if no more letter after this, move to the next word index
       if (this.currentLetterSequence.length === 0) {
         this.wordIndex++;
