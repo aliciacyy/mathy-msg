@@ -1,5 +1,10 @@
 export type LetterObj = {
   letter: string;
   number: number;
-  qusetions: string[];
+  questions: string[];
+}
+
+export type QuestionObj = {
+  question: string;
+  attempt: number;
 }

@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   lettersMap: {
     [key: string]: any,
    } = {};
-
   constructor(private httpClient: HttpClient) { 
   }
 
@@ -25,7 +24,12 @@ export class AppComponent implements OnInit {
     .subscribe(data => {
       const doc = yaml.load(data);
       (doc as LetterObj[]).map((element: LetterObj) => {
-        this.lettersMap[element.letter] = element;
+        this.lettersMap[element.letter] = {
+          'letter': element.letter,
+          'number': element.number,
+          'questions': element.questions.map((q: string) => ({'question': q, 'attempt': 0}))
+        }
+        this.lettersMap['attemptNumber'] = -1;
       });
     });
   }
