@@ -1,3 +1,31 @@
 .mdc-card__body {
   margin-bottom: 16px;
 }
+
+.word-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.word-container > div {
+  margin-right: 8px;
+}
+
+.word-container .mdc-card-content {
+  line-height: 14px;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.word-container .mdc-card-content.show {
+  opacity: 1;
+}
+
+.mdc-card.no-top {
+  margin-top: 8px;
+}
+.msg {
+  font-family: 'Perfectly Together', sans-serif;
+  font-size: 22px;
+  color: #C2185B;
+}

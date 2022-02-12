@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class GameOverViewComponent implements OnInit {
 
   @Input() gameOverType = '';
+  @Input() attempts: number;
   gameOverMessage = '';
   @Output() changeView = new EventEmitter<string>();
   

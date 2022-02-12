@@ -8,11 +8,34 @@
       <div class="mdc-card-content">
         <div class="mdc-card__title">You Win!</div>
         <div class="mdc-card__body">
+          <p>Number of attempts: {{attempts}}</p>
           Congratulations on winning! Click on the button to reveal the message.
         </div>
-        <button type="button" class="button">REVEAL</button>
+        <button type="button" class="button" (click)="onReveal()">REVEAL</button>
       </div>
     </div>
+
+    <div class="word-container">
+      <div class="mdc-card no-top msg">
+        <div class="mdc-card-content" [class.show] = "!!showQueue[0]">HAPPY</div>
+      </div>
+      <div class="mdc-card no-top msg">
+        <div class="mdc-card-content" [class.show] = "!!showQueue[1]">EIGHTH</div>
+      </div>
+      <div class="mdc-card no-top msg">
+        <div class="mdc-card-content" [class.show] = "!!showQueue[2]">VALENTINE'S</div>
+      </div>
+      <div class="mdc-card no-top msg">
+        <div class="mdc-card-content" [class.show] = "!!showQueue[3]">DAY</div>
+      </div>
+      <div class="mdc-card no-top msg">
+        <div class="mdc-card-content" [class.show] = "!!showQueue[4]">TO</div>
+      </div>
+      <div class="mdc-card no-top msg">
+        <div class="mdc-card-content" [class.show] = "!!showQueue[5]">HUNNY</div>
+      </div>
+    </div>
+    
   </div>
   
 </div>
