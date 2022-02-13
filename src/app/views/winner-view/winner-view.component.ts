@@ -8,7 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class WinnerViewComponent implements OnInit {
 
   @Input() attempts: number;
+  @Input() finalSentence: string[][];
   showQueue = [false, false, false, false, false, false];
+  moveDistance = 0;
+  revealClicked = false;
 
   constructor() { }
 
@@ -16,9 +19,14 @@ export class WinnerViewComponent implements OnInit {
   }
 
   onReveal() {
+    this.revealClicked = true;
     for (let i=0; i<this.showQueue.length; i++) {
       setTimeout(() => {this.showQueue[i] = true; }, i * 500);
     }
+    setTimeout(() =>{
+      const dotsDiv = document.getElementById("dots");
+      this.moveDistance = dotsDiv!.clientHeight + 7;
+    }, 3000);
   }
 
 }

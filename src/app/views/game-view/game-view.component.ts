@@ -14,6 +14,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
   @Input() lettersMap: {
     [key: string]: any,
    } = {};
+  @Input() finalSentence: string[][];
   countdownNumberEl: HTMLElement | null;
   dotEls: HTMLCollectionOf<any>;
   interval: any;
@@ -79,6 +80,11 @@ export class GameViewComponent implements OnInit, OnDestroy {
       letterIndexes.push(i);
     }
     this.currentLetterSequence = this.shuffle(letterIndexes);
+    let shuffledWord: string[] = [];
+    this.currentLetterSequence.forEach((idx) => {
+      shuffledWord.push(word[idx]);
+    })
+    this.finalSentence.push(shuffledWord);
   }
 
   getQuestion() {

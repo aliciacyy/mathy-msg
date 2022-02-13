@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
   lettersMap: {
     [key: string]: any,
    } = {};
+  finalSentence: string[][] = [];
+
   constructor(private httpClient: HttpClient) { 
   }
 

@@ -11,11 +11,17 @@
           <p>Number of attempts: {{attempts}}</p>
           Congratulations on winning! Click on the button to reveal the message.
         </div>
-        <button type="button" class="button" (click)="onReveal()">REVEAL</button>
+        <button type="button" class="button" (click)="onReveal()" [disabled]="revealClicked">REVEAL</button>
       </div>
     </div>
 
-    <div class="word-container">
+    <div id="dots" class="dots-section">
+      <div *ngFor="let word of finalSentence; index as i" class="dots-word">
+        <span *ngFor="let letter of word" class="dot" [class.move-dot] = "!!showQueue[i]">{{letter}}</span>
+      </div>
+    </div>
+
+    <div class="word-container" [ngStyle]="{'bottom.px': moveDistance}">
       <div class="mdc-card no-top msg">
         <div class="mdc-card-content" [class.show] = "!!showQueue[0]">HAPPY</div>
       </div>
@@ -32,7 +38,7 @@
         <div class="mdc-card-content" [class.show] = "!!showQueue[4]">TO</div>
       </div>
       <div class="mdc-card no-top msg">
-        <div class="mdc-card-content" [class.show] = "!!showQueue[5]">HUNNY</div>
+        <div class="mdc-card-content" [class.show] = "!!showQueue[5]">HUNNY!</div>
       </div>
     </div>
     

@@ -4,13 +4,13 @@
       <app-start-view (changeView)="onChangeView($event)"></app-start-view>
     </ng-container>
     <ng-container *ngSwitchCase="'gameView'">
-      <app-game-view [lettersMap]="lettersMap" (changeView)="onChangeView($event)" (gameOverMsg)="setGameOverMsg($event)"></app-game-view>
+      <app-game-view [lettersMap]="lettersMap" [finalSentence]="finalSentence" (changeView)="onChangeView($event)" (gameOverMsg)="setGameOverMsg($event)"></app-game-view>
     </ng-container>
     <ng-container *ngSwitchCase="'gameOverView'">
       <app-game-over-view [gameOverType]="gameOverMsg" [attempts]="lettersMap['attemptNumber'] + 1" (changeView)="onChangeView($event)"></app-game-over-view>
     </ng-container>
     <ng-container *ngSwitchCase="'winnerView'">
-      <app-winner-view [attempts]="lettersMap['attemptNumber'] + 1"></app-winner-view>
+      <app-winner-view [finalSentence]="finalSentence" [attempts]="lettersMap['attemptNumber'] + 1"></app-winner-view>
     </ng-container>
     <ng-container *ngSwitchDefault></ng-container>
   </ng-container>
