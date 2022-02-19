@@ -89,7 +89,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
 
   getQuestion() {
     if (this.currentLetterSequence.length > 0) {
-      this.currentAnswer = this.sentence[this.wordIndex][this.currentLetterSequence.pop() as number];
+      this.currentAnswer = this.sentence[this.wordIndex][this.currentLetterSequence.shift() as number];
       let unusedQuestions = this.lettersMap[this.currentAnswer].questions.filter((questionObj: QuestionObj) => questionObj.attempt <= this.lettersMap['attemptNumber']);
       let questionSize = unusedQuestions.length;
       let questionObj = unusedQuestions[this.getRandomInt(questionSize)];

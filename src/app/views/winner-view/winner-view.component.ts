@@ -16,6 +16,10 @@ export class WinnerViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // clear away any previous wrong words
+    if (this.finalSentence.length !== 6) {
+      this.finalSentence = this.finalSentence.slice(this.finalSentence.length - 6);
+    }
   }
 
   onReveal() {
